@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>类的三大特征</title>
+
+
+	<script type="text/javascript">
+
+	//动物类
+	function Animal(name){
+		this.name = name;
+	}
+
+	function Dog(name) {
+		this.dog = Animal; //继承的写法
+		this.dog(name);
+	}
+
+	function Cat(name){
+		this.cat = Animal;
+		this.cat(name);
+	}
+
+
+	//食物类
+	function Food(name){
+		this.name = name;
+
+	}
+	function Fish(name){
+		this.fish = Food;
+		this.fish(name);
+	}
+
+	function Bone(name){
+		this.bone = Food;
+		this.bone(name);
+	}
+
+	//主人类
+	function Master(){
+		this.Feed = function(animal, food){
+			document.write("主人给" + animal.name + "喂" + food.name);
+		}
+	}
+
+
+	var dog = new Dog("旺财");
+	var cat = new Cat("咪咪");
+
+	var fish = new Fish("小鱼");
+	var bone = new Bone("狗骨头");
+
+	var master = new Master();
+	master.Feed(dog,bone);
+	master.Feed(cat,fish);
+
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
