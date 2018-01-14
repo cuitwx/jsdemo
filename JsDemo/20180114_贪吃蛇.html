@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>贪吃蛇大战</title>  
+
+<style type="text/css">  
+ 
+</style>  
+
+</head>  
+  
+<body>  
+  <div Id="screen" style="width: 800px;height: 600px;background-color: lightgray;">
+	<img   src="img/food.png"  />
+
+	<img src="img/snake.png"  />
+  </div>
+ <div Id="love"></div>
+
+ <script type="text/javascript">  
+
+ //点类
+ function point(x, y) {
+ 	this.x = x;
+ 	this.y = y;
+
+ 	this.showPoint = function(){
+ 		alert('x=' + x +' y=' + y);
+ 	}
+ }
+
+ function createFood(){
+ 	var screen = document.getElementById('screen');
+
+ 	var p = new point('200px','100px');
+
+ 	var food = document.createElement('img');
+ 	food.setAttribute('src','img/food.png');
+ 	food.setAttribute('style','position:absolute;left:'+p.x+';top:'+p.y+';');
+ 	screen.appendChild(food);
+ }
+
+
+ //初始化游戏场景
+ function initScreen(){
+ 	//创建食物
+ 	createFood();
+ }
+
+//执行
+ initScreen();
+
+
+</script>  
+
+</body>  
+</html>  
