@@ -11,12 +11,13 @@
 </head>  
   
 <body>  
-  <div Id="screen" style="width: 800px;height: 600px;background-color: lightgray;">
-	<img   src="img/food.png"  />
-
+  <div Id="screen" style="width: 800px;height: 600px;background-color: lightgray;float: left;">
+	
 	<img src="img/snake.png"  />
   </div>
- <div Id="love"></div>
+ <div Id="tool" style="width: 200px;height: 600px;background-color: gray;float: left;">
+	<p>食物的位置：</p><span id="foodPositionInfo" style="color: white;"></span>
+ </div>
 
  <script type="text/javascript">  
 
@@ -30,15 +31,31 @@
  	}
  }
 
+ //生成随机数
+ function getRoundNumber(max)
+ {
+ 	return Math.round(Math.random()*max);
+ }
+
  function createFood(){
  	var screen = document.getElementById('screen');
 
- 	var p = new point('200px','100px');
+ 	//获取0-800随机数
+ 	var x = getRoundNumber(800);
+ 	//获取0-600随机数
+ 	var y = getRoundNumber(600);
+
+ 	var p = new point(x + 'px',y + 'px');
 
  	var food = document.createElement('img');
  	food.setAttribute('src','img/food.png');
  	food.setAttribute('style','position:absolute;left:'+p.x+';top:'+p.y+';');
  	screen.appendChild(food);
+
+ 	//显示食物位置
+ 	var foodPositionInfo = document.getElementById('foodPositionInfo');
+ 	foodPositionInfo.innerHTML = 'x=' + x +'px <br>' + 'y=' + y +'px';
+
  }
 
 
