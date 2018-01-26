@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>小球弹性运动</title>  
+	<script type="text/javascript">
+
+		var directX = 1;
+		var directY = 1;
+		var ballX = 0;
+		var ballY = 0;
+
+		
+		function move()
+		{
+			ballX+=directX;
+			ballY+=directY;
+
+			console.log("ballX：" + ball.style.left );
+
+			ball.style.left = ballX +"px";
+			ball.style.top = ballY +"px";
+
+			if(ballX + ball.offsetWidth >= 600 || ballX < 0){
+				directX =- directX;
+			}
+
+			if(ballY + ball.offsetHeight >= 500 || ballY  < 0){
+				directY =- directY;
+			}
+
+
+		}
+
+		//setInterval("move()",10);
+
+		var int=self.setInterval("move()",10);
+
+	</script>
+
+ 
+</head>  
+  
+<body>  
+  <div id="screen" style="width: 600px;height: 500px;margin: 10px;border: 1px solid black;">
+<div id="ball" style="border-radius: 15px;position: relative;width: 30px;height: 30px;background-color: black;left: 10px;top: 10px;">
+	<label style="color: red;margin-left: 16px;">ball</label>
+</div>
+
+</body>  
+</html>  
