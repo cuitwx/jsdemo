@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>导航切换</title>  
+<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<script type="text/javascript">
+
+		function change(obj,name) {			
+			obj.style.backgroundColor = "black";
+			obj.style.color = "white";
+
+			if(name == 'menu1'){
+				menu1.class = "navright";
+				menu2.class = "navright show";
+				menu3.class = "navright show";
+
+			}else if(name == 'menu2'){
+				menu1.class = "navright show";
+				menu2.class = "navright";
+				menu3.class = "navright show";
+
+			}else if(name == 'menu3'){
+				menu1.class = "navright show";
+				menu2.class = "navright show";
+				menu3.class = "navright";
+
+			}
+
+		}
+
+		function out(obj){
+			obj.style = "";
+		}
+
+		
+
+	</script>
+
+ 
+</head>  
+  
+<body>  
+ 
+ <div class="nav">
+ 	<div class="navleft">
+		<ul>
+			<li onmouseover="change(this,menu1)" onmouseout="out(this)">菜单一</li>
+			<li onmouseover="change(this,menu2)" onmouseout="out(this)">菜单二</li>
+			<li onmouseover="change(this,menu3)" onmouseout="out(this)">菜单三</li>
+		</ul>
+ 	</div>
+	
+	<div id="menu1" class="navright" >
+		<ul >
+			<a href="javascript:;"><li>菜单一11111111</li></a>
+			<a href="javascript:;"><li>菜单一11111111</li></a>
+			<a href="javascript:;"><li>菜单一11111111</li></a>
+			<a href="javascript:;"><li>菜单一11111111</li></a>
+			<a href="javascript:;"><li>菜单一11111111</li></a>
+			<a href="javascript:;"><li>菜单一11111111</li></a>
+			<a href="javascript:;"><li>菜单一11111111</li></a>
+			<a href="javascript:;"><li>菜单一11111111</li></a>
+		</ul>
+	</div>
+
+	<div id="menu2" class="navright show" >
+		<ul>
+			<a href="javascript:;"><li>菜单二22222222</li></a>
+			<a href="javascript:;"><li>菜单二22222222</li></a>
+			<a href="javascript:;"><li>菜单二22222222</li></a>
+			<a href="javascript:;"><li>菜单二22222222</li></a>
+			<a href="javascript:;"><li>菜单二22222222</li></a>
+			<a href="javascript:;"><li>菜单二22222222</li></a>
+			<a href="javascript:;"><li>菜单二22222222</li></a>
+			<a href="javascript:;"><li>菜单二22222222</li></a>
+		</ul>
+	</div>
+
+	<div id="menu3" class="navright show">
+		<ul>
+			<a href="javascript:;"><li>菜单三33333333</li></a>
+			<a href="javascript:;"><li>菜单三33333333</li></a>
+			<a href="javascript:;"><li>菜单三33333333</li></a>
+			<a href="javascript:;"><li>菜单三33333333</li></a>
+			<a href="javascript:;"><li>菜单三33333333</li></a>
+			<a href="javascript:;"><li>菜单三33333333</li></a>
+			<a href="javascript:;"><li>菜单三33333333</li></a>
+			<a href="javascript:;"><li>菜单三33333333</li></a>
+		</ul>
+	</div>
+ </div>
+
+</body>  
+</html>  
