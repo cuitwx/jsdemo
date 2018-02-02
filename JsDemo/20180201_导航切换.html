@@ -11,20 +11,19 @@
 			obj.style.color = "white";
 
 			if(name == 'menu1'){
-				menu1.class = "navright";
-				menu2.class = "navright show";
-				menu3.class = "navright show";
+				menu1.className  = "navright";
+				menu2.className  = "navright show";
+				menu3.className  = "navright show";				
 
 			}else if(name == 'menu2'){
-				menu1.class = "navright show";
-				menu2.class = "navright";
-				menu3.class = "navright show";
+				menu1.className  = "navright show";
+				menu2.className  = "navright";
+				menu3.className  = "navright show";				
 
 			}else if(name == 'menu3'){
-				menu1.class = "navright show";
-				menu2.class = "navright show";
-				menu3.class = "navright";
-
+				menu1.className = "navright show";
+				menu2.className = "navright show";
+				menu3.className = "navright";
 			}
 
 		}
@@ -45,9 +44,9 @@
  <div class="nav">
  	<div class="navleft">
 		<ul>
-			<li onmouseover="change(this,menu1)" onmouseout="out(this)">菜单一</li>
-			<li onmouseover="change(this,menu2)" onmouseout="out(this)">菜单二</li>
-			<li onmouseover="change(this,menu3)" onmouseout="out(this)">菜单三</li>
+			<li onmouseover="change(this,'menu1')" onmouseout="out(this)">菜单一</li>
+			<li onmouseover="change(this,'menu2')" onmouseout="out(this)">菜单二</li>
+			<li onmouseover="change(this,'menu3')" onmouseout="out(this)">菜单三</li>
 		</ul>
  	</div>
 	
